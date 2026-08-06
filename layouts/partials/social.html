@@ -1,0 +1,12 @@
+{{ with .Site.Params.Email }}
+<a href="mailto:{{.}}"><img class="icon-social" src="{{ "/img/email.svg" | relURL }}" alt="Email Me!"/></a>
+{{ end }}
+{{ with .Site.Params.Github }}
+<a href="{{.}}"><img class="icon-social" src="{{ "/img/github.svg" | relURL }}" alt="Github"/></a>
+{{ end }}
+{{ with .Site.Params.Twitter }}
+<a href="{{.}}"><img class="icon-social" src="{{ "/img/twitter.svg" | relURL }}" alt="Twitter"/></a>
+{{ end }}
+{{ with .OutputFormats.Get "rss" -}}
+<a href="{{.Permalink}}" target="_blank"><img class="icon-social" src="{{ "/img/feed.svg" | relURL }}" alt="Feed"></a>
+{{ end }}
